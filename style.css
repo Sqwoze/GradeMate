@@ -89,7 +89,6 @@ body {
     color: black;
     font-weight: bold;
     border: 3px solid black;
-    text-shadow: white 3px 3px 3px;
     text-align: left;
     position: relative;
     top: 200px;
@@ -98,8 +97,8 @@ body {
 
 .main-section button:hover {
     cursor: pointer;
-    background: white;
-    color: black;
+    background: black;
+    color: white;
 }
 
 footer {
