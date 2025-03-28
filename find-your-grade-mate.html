@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
     <script src="script.js" defer></script>
     <link rel="icon" type="image/png" href="Grademate__1_-removebg-preview.png">
 </head>
+
 <body>
     <div class="background-overlay">
         <img class="site-bg-img" src="scott-graham-OQMZwNd3ThU-unsplash.jpg" alt="website background image">
     </div>
-    
+
     <a href="index.html"><img class="site-logo" src="Grademate-removebg-preview.png" alt="GradeMate logo"></a>
-    
+
     <nav>
         <div class="nav-items">
             <a href="index.html"><button>Home</button></a>
@@ -23,10 +25,25 @@
         </div>
     </nav>
 
+    <div class="personal-data">
+        <div class="grade-input">
+            <label for="studentName">Full Name</label>
+            <input type="text" id="studentName" placeholder="Enter your full name">
+        </div>
+        <div class="grade-input">
+            <label for="schoolName">School Name</label>
+            <input type="text" id="schoolName" placeholder="Enter your school name">
+        </div>
+        <div class="grade-input">
+            <label for="currentYear">Current Year</label>
+            <input type="text" id="currentYear" placeholder="e.g., Year 10, Year 11">
+        </div>
+    </div>
+
     <div class="subject-selection">
         <h1>Subjects & Grades</h1>
         <p>Enter your IGCSE grades. Use A*, A, B, C, D, or E. Leave blank if not taken.</p>
-        
+
         <div class="grade-input-grid">
             <div class="grade-input">
                 <label for="mathGrade">Mathematics</label>
@@ -107,6 +124,17 @@
             <button onclick="calculateDetailedGPA()">Calculate GPA</button>
             <p>Your GPA: <span id="gpaResult">-</span></p>
         </div>
+        <div class="result-card">
+            <div>Name:</div>
+            <div id="name-result"></div>
+            <div>School:</div>
+            <div id="school-result"></div>
+            <div>Year:</div>
+            <div id="year-result"></div>
+            <div>Gpa:</div>
+            <div id="gpa-result"></div>
+        </div>
     </div>
 </body>
+
 </html>

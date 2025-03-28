@@ -18,6 +18,42 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    justify-content: center;
+    flex: 1;
+    font-size: 20px;
+}
+
+.main-section p {
+    max-width: 800px;
+    
+}
+
+.main-section a {
+    background: #333;
+    color: white;
+    border: 2px solid #333;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main-section a:hover {
+    background: white;
+    color: #333;
 }
 
 /* Background Styling */
@@ -92,59 +128,30 @@ nav {
     color: white;
 }
 
-/* Main Section */
-.main-section {
-    max-width: 800px;
-    width: 90%;
-    margin: 50px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    text-align: center;
-}
-
-.main-section h1 {
-    font-family: 'Permanent Marker', cursive;
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-}
-
-.main-section p {
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-
-.cta-buttons {
+/* Personal Data Section */
+.personal-data {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 20px;
+    max-width: 1000px;
+    width: 95%;
+    margin: 20px auto;
     flex-wrap: wrap;
 }
 
-.cta-buttons a {
-    text-decoration: none;
+.personal-data .grade-input {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
 }
 
-.primary-button {
-    background: #333;
-    color: white;
-    border: 2px solid #333;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
+.personal-data .grade-input input {
+    width: 100%;
 }
 
-.primary-button:hover {
-    background: white;
-    color: #333;
-}
-
-/* Subject Selection Page */
+/* Subject Selection Section */
 .subject-selection {
     max-width: 1000px;
     width: 95%;
@@ -210,8 +217,30 @@ nav {
     color: #333;
 }
 
+.result-card {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0px 20px;
+    max-width: fit-content;
+    margin: 12px auto;
+    border: 2px solid black;
+    padding: 12px 20px;
+    border-radius: 12px;
+    min-width: 170px;
+}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
+    .personal-data {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .personal-data .grade-input {
+        width: 100%;
+        max-width: none;
+    }
+
     .site-logo {
         height: 50px;
         left: 5px;
@@ -227,19 +256,6 @@ nav {
         padding: 6px 12px;
     }
 
-    .main-section {
-        width: 95%;
-        padding: 15px;
-    }
-
-    .main-section h1 {
-        font-size: 2rem;
-    }
-
-    .main-section p {
-        font-size: 1rem;
-    }
-
     .grade-input-grid {
         grid-template-columns: 1fr;
     }
@@ -248,24 +264,6 @@ nav {
 @media screen and (max-width: 480px) {
     .site-logo {
         height: 40px;
-    }
-
-    .main-section h1 {
-        font-size: 1.5rem;
-    }
-
-    .main-section p {
-        font-size: 0.9rem;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .primary-button {
-        width: 100%;
-        max-width: 250px;
     }
 }
 
